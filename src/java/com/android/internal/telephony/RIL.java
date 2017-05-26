@@ -3836,6 +3836,10 @@ public class RIL extends BaseCommands implements CommandsInterface {
     }
 
     @Override
+    public void getAtr(Message response) {
+    }
+
+    @Override
     public void getIMEI(Message result) {
         throw new RuntimeException("getIMEI not expected to be called");
     }
@@ -4084,6 +4088,7 @@ public class RIL extends BaseCommands implements CommandsInterface {
         RILRequest rr = (RILRequest)request;
         processResponseDone(rr, responseInfo, ret);
     }
+
     /**
      * Function to send ack and acquire related wakelock
      */
@@ -4760,6 +4765,8 @@ public class RIL extends BaseCommands implements CommandsInterface {
                 return "RIL_REQUEST_START_NETWORK_SCAN";
             case RIL_REQUEST_STOP_NETWORK_SCAN:
                 return "RIL_REQUEST_STOP_NETWORK_SCAN";
+            case RIL_REQUEST_SIM_QUERY_ATR:
+                return "RIL_REQUEST_SIM_QUERY_ATR";
             default: return "<unknown request>";
         }
     }

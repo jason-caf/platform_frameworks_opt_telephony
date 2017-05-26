@@ -99,6 +99,7 @@ public class UiccCard {
     private static final int EVENT_CARRIER_PRIVILIGES_LOADED = 20;
     private static final int EVENT_SIM_GET_ATR_DONE = 21;
     private static final int EVENT_CARRIER_PRIVILEGES_LOADED = 20;
+    private static final int EVENT_SIM_GET_ATR_DONE = 21;
 
     private static final LocalLog mLocalLog = new LocalLog(100);
 
@@ -681,7 +682,7 @@ public class UiccCard {
     }
 
     /**
-     * Exposes {@link CommandsInterface.sendEnvelopeWithStatus}
+     * Exposes {@link CommandsInterface#sendEnvelopeWithStatus}
      */
     public void sendEnvelopeWithStatus(String contents, Message response) {
         mCi.sendEnvelopeWithStatus(contents, response);

@@ -2175,7 +2175,7 @@ public class SimulatedCommands extends BaseCommands
         SimulatedCommandsVerifier.getInstance().setOnRestrictedStateChanged(h, what, obj);
     }
 
-   @Override
+    @Override
     public void getAtr(Message response) {
         unimplemented(response);
     }
